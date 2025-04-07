@@ -1,5 +1,6 @@
 import React from 'react'
 import imageData from '../imagesImp' // Adjust the path as necessary;
+import { Link } from 'react-router-dom'
 const Project = () => {
 return (
     <div data-scroll-container id='projects' className="sm:h-full lg:h-full bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center">
@@ -38,6 +39,13 @@ return (
                     </div>
                 ))}
             </div>
+            <div className="text-center mt-8">
+        <Link to="/projects" 
+          className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          View All Projects
+        </Link>
+      </div>
         </div>
     </div>
 )

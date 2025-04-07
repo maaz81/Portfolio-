@@ -288,32 +288,24 @@
 
 // export default App;
 
-import React from 'react'
-import Front from './components/mainWeb/Front'
-import About from './components/mainWeb/About'
-import Project from './components/mainWeb/Project'
-import Experience from './components/mainWeb/Experience'
-import Footer from './components/mainWeb/Footer'
-import Contract from './components/mainWeb/Contract'
-import BlogPreview from './components/blogWeb/BlogPreview'
-import PostaBlog from './components/blogWeb/PostaBlog'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Merge from './components/mainWeb/Merge';
+import ProjectFull from './components/project/ViewallProjects';
 import VeiwAllPost from './components/blogWeb/VeiwAllPost'
+import Contact from './components/freelance/Contact';
 
-const App = () => {
-  
+function App() {
   return (
-    <div className='w-screen'>
-      <Front/>
-      <About/>
-      <Experience/>
-      <Project/>
-      <BlogPreview/>
-      <Contract/>
-      <Footer/>
-      {/* <VeiwAllPost/> */}
-      
+    <div className="w-screen">
+      <Router>
+      <Routes>
+        <Route path="/" element={<Merge />} />
+        <Route path="/projects" element={<ProjectFull />} />
+        <Route path="/blog" element={<VeiwAllPost />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
     </div>
-  )
+  );
 }
-
-export default App
+export default App;

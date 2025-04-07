@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BlogPreview = () => {
   const blogPosts = [
@@ -36,11 +37,11 @@ const BlogPreview = () => {
         ))}
       </div>
       <div className="text-center mt-8">
-        <a href="/blog" 
+        <Link to="/blog" 
           className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
           View All Posts
-        </a>
+        </Link>
       </div>
     </section>
   );
